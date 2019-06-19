@@ -1,3 +1,19 @@
-<p>
-  home works!
-</p>
+<!-- <h1 [ngClass]="{
+    'gray' : h1style,
+    'large' : !h1style
+}">Home</h1> -->
+<div *ngIf="users">
+  <ul>
+    <li *ngFor="let item of users.data; let i = index ">
+      {{i}}
+      <ul>
+        <li>id: {{item.id}}</li>
+        <li>name: {{item.first_name}}</li>
+        <li>last: name {{item.last_name}} </li>
+        <img [src]="item.avatar">
+        <li>email: {{item.email}}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<button (click)='firstClick()'>Click me</button>
